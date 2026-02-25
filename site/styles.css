@@ -1,0 +1,273 @@
+/* Queenright brochure – matches app theme */
+:root {
+  --primary: #FF692D;
+  --primary-hover: #F48D68;
+  --background: #F6F5F3;
+  --surface: #FFFFFF;
+  --text: #22201D;
+  --text-muted: #777573;
+  --border: #DCD9D6;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.app-name {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: 720px;
+  padding: 0 1.5rem 2rem;
+}
+
+.hero {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.hero-headline {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 0.75rem;
+  line-height: 1.2;
+}
+
+.tagline {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.features {
+  margin-bottom: 2.5rem;
+}
+
+.features-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.feature-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.feature-icon {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 0.75rem;
+}
+
+.feature-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.download {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.download-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--text);
+}
+
+.download-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0 0 1.25rem;
+  line-height: 1.5;
+}
+
+.download-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .download-buttons {
+    flex-direction: column;
+  }
+
+  .download-btn {
+    width: 100%;
+  }
+}
+
+.download-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.download-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.download-btn:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.footer {
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-link {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Content pages (e.g. privacy) */
+.content-page {
+  max-width: 640px;
+}
+
+.content-article {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.content-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 0.25rem;
+}
+
+.content-updated {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 1.5rem;
+}
+
+.content-article h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.content-article h3:first-of-type {
+  margin-top: 0;
+}
+
+.content-article p,
+.content-article ul {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 1rem;
+}
+
+.content-article ul {
+  padding-left: 1.5rem;
+}
+
+.content-article li {
+  margin-bottom: 0.5rem;
+}
+
+.content-article a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.content-article a:hover {
+  text-decoration: underline;
+}
+
+.logo-link,
+.app-name-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-name-link:hover {
+  text-decoration: underline;
+}
